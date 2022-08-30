@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="container text-center mb-5">
+        <h1 class="fw-bold fs-1 text-info">My Phones</h1>
+       <div class="my-5">
+        <input id="src-field" class="w-75 py-3 rounded" type="text" placeholder="Input Your Keyword">
+        <button id="btn-src" class="btn btn-primary p-3">Search</button>
+       </div>
+    </header>
+    <main>
+        <section class="container">
+             <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
+             </div>
+             <div class="mt-5 d-none" id="no-found-message">
+                <h1 class="text-center text-danger">No Phone Found.Please Try with Another Keyword!!!!!</h1>
+             </div>
+             <div id="show-all" class="text-center d-none mt-5">
+                <button id="btn-show-all" class="btn btn-info px-5">Show All</button>
+             </div>
+        </section>
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="showDetailsModal" tabindex="-1" aria-labelledby="showDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h3 class="modal-title fw-bold text-info" id="showDetailsModalLabel" ></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="phones-detail" class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section id="loader" class="container mt-5 d-none">
+            <div style="height: 500px;" class="d-flex justify-content-center align-items-center text-primary ">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
